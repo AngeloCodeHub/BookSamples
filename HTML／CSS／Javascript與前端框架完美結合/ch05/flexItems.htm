@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>flex items屬性練習</title>
+<style>
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+body {
+  background-color: #dce3e4;
+  display: flex;
+  justify-content: center;   /*靠主軸中心點對齊(置中對齊)*/
+  align-items: center;       /*交叉軸置中對齊(垂直置中對齊)*/
+}
+.cards {
+  width: auto;
+  height:100%;
+  display: flex;
+  flex-wrap:wrap;  /*設定flex容器可以多行*/
+  justify-content: flex-start;  /*靠主軸起點對齊(靠左對齊)*/
+  align-items: center; /*交叉軸置中對齊(垂直置中對齊)*/
+}
+.card {
+  margin: 25px;
+  background-color: #fff;
+  width: 250px;
+  min-width:250px;
+  height:500px;
+  min-height:450px;
+  border-radius: 12px;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+.card:hover {
+	box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.1, 1.1);
+	cursor:pointer;
+}
+.card-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+.card-cost {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+.card-text  {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+	color: #868686;
+}
+.card-img {
+	width: 100%;
+    height: 335px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card-body{
+	padding:10px;
+}
+.item{
+	display: flex;
+}
+button {
+    align-self: center;
+	border-radius: 5px;
+    padding: 5px;
+    margin-left: .1rem;
+	border:1px solid #c0c0c0;
+}
+button:hover {
+    transform: scale(1.1, 1.1);
+	cursor:pointer;
+}
+.flex-none {
+    flex: none;   /*相當於 flex: 0 0 auto(不伸展、不壓縮、隨內容調整大小)*/
+}
+.flex-1 {
+    flex: 150px;  /*只設定寬度(flex-basis), flex-grow與flex-shrink為預設值*/
+}
+</style>
+</head>
+<body>
+<div class="cards">
+	<div class="card">
+	  <img class="card-img" src="images/c1.jpg" alt="拿鐵咖啡">
+	  <div class="card-body">
+		<h5 class="card-title">拿鐵咖啡</h5>
+		<div class="item">
+			<p class="card-text">富含堅果及果酸風味的濃縮咖啡為基底,沖入溫熱微甜鮮奶,口感絲滑順口.</p>
+			<button>查看</button>
+		</div>
+		<span class="card-cost">$ 120</span>
+	  </div>
+	</div>
+	<div class="card">
+	  <img class="card-img" src="images/c2.jpg" alt="美式咖啡">
+	  <div class="card-body">
+		<h5 class="card-title">美式咖啡</h5>
+		<div class="item">
+			<p class="card-text">結合經典濃縮咖啡及熱水，帶來濃郁豐富的咖啡滋味.</p>
+			<button class="flex-none">查看</button>
+		</div>
+		<span class="card-cost">$ 90</span>
+		
+	  </div>
+	</div>   
+	<div class="card">
+	  <img class="card-img" src="images/c3.jpg" alt="卡布奇諾">
+	  <div class="card-body">
+		<h5 class="card-title">卡布奇諾</h5>
+		<div class="item">
+			<p class="card-text">融合濃縮咖啡及現蒸牛奶，加上豐厚細緻的奶泡，呈現醇厚咖啡風味.</p>
+			<button class="flex-1">查看</button>
+		</div>
+		<span class="card-cost">$ 150</span>
+	  </div>
+	</div>
+	<div class="card">
+	  <img class="card-img" src="images/c3.jpg" alt="卡布奇諾">
+	  <div class="card-body">
+		<h5 class="card-title">卡布奇諾</h5>
+		<div class="item">
+			<p class="card-text">融合濃縮咖啡及現蒸牛奶，加上豐厚細緻的奶泡，呈現醇厚咖啡風味.</p>
+			<button class="flex-1">查看</button>
+		</div>
+		<span class="card-cost">$ 150</span>
+	  </div>
+	</div>
+	<div class="card">
+	  <img class="card-img" src="images/c3.jpg" alt="卡布奇諾">
+	  <div class="card-body">
+		<h5 class="card-title">卡布奇諾</h5>
+		<div class="item">
+			<p class="card-text">融合濃縮咖啡及現蒸牛奶，加上豐厚細緻的奶泡，呈現醇厚咖啡風味.</p>
+			<button class="flex-1">查看</button>
+		</div>
+		<span class="card-cost">$ 150</span>
+	  </div>
+	</div>
+	<div class="card">
+	  <img class="card-img" src="images/c3.jpg" alt="卡布奇諾">
+	  <div class="card-body">
+		<h5 class="card-title">卡布奇諾</h5>
+		<div class="item">
+			<p class="card-text">融合濃縮咖啡及現蒸牛奶，加上豐厚細緻的奶泡，呈現醇厚咖啡風味.</p>
+			<button class="flex-1">查看</button>
+		</div>
+		<span class="card-cost">$ 150</span>
+	  </div>
+	</div>
+</div>
+</body>
+</html>

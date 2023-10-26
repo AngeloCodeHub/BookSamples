@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.container1 {
+  display: flex;
+  flex-wrap:nowrap;
+}
+.container2 {
+  display: flex;
+  flex-wrap:wrap;
+}
+.container3 {
+  display: flex;
+  flex-wrap:wrap-reverse;
+}
+.item {
+  background: #bb0;
+  color: #0ff;
+  margin: 15px;
+  padding: 15px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>通訊錄管理</title> 
+<link rel=stylesheet type="text/css" href="css/style.css">
+
+<style>
+table {
+	margin:10px;
+}
+tr, th, td {
+    border-bottom: 1px solid #000000;	
+}
+th, td{
+	text-align:center;
+	padding:5px;
+}
+h3, p { display:inline-block;}
+</style>
+<script>
+window.addEventListener('load', () => {
+    
+	window.indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB;
+	if (!window.indexedDB) {
+		showMessage("您的瀏覽器不支援indexedDB");
+	}
+
+
+})
+</script>
+</head>
+<body>
+<fieldset>
+<legend>個人通訊錄</legend>
+<button id="clearDatabtn" class="orangeBtn">清空資料</button><button id="dropDBbtn" class="orangeBtn">刪除資料庫</button>
+<div style="float:right">
+<button id="newbtn" class="orangeBtn sprite sprite-new"></button>&nbsp;<button id="readDatabtn" class="orangeBtn sprite sprite-search"></button>
+</div>
+<div>
+<h3 id="showJob">新增資料</h3>&nbsp;<p id="msg" style="color:red;"></p>
+</div>
+<form id="userform">
+<label for="name">姓名：</label><input type="text" id='name' class="userItem">　　
+<label for="tel">電話：</label><input type="text" id='tel' class="userItem"><br>
+<label for="address">地址：</label><input type="text" id='address' class="userItem" size=58><br>
+<label for="email">Mail：</label><input type="text" id='email' class="userItem" size=58><br>
+<label for="memo">備註：</label><input type="text" id='memo' class="userItem" size=58><br>
+<input type="hidden" id='IDkey' class="userItem">
+<div id="findDate" style="margin:5px 0px">
+<label for="timestamp">建立日期：<input type="date" id='startDate' value=""> ~ <input type="date" id='endDate' value="">
+</div>
+<button id="addbtn" class="btn">新增OK</button>
+<button id="putbtn" class="btn">修改OK</button>
+<button id="findbtn" class="btn">送出搜尋</button>
+</form>
+<section>
+<table id='listTb'></table>
+</section>
+</fieldset>
+</body>
+</html>

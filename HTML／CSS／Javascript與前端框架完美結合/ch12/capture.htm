@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件捕獲(capture)</title> 
+<style>
+#outer{width:100px;height:50px;background-color:#C7DFC5;text-align:center}
+</style>
+</head>
+<body>
+<div id="outer">
+	<a href="javascript:void(0);" id="link">超連結</a>
+</div>
+<div id="showMsg">
+	
+</div>
+<script>
+document.getElementById("outer").addEventListener("click", (e) => {	
+	document.getElementById("showMsg").innerHTML += "DIV物件被點擊了!<br>";	
+}, true);
+
+document.getElementById("link").addEventListener("click", (e) => {	
+	document.getElementById("showMsg").innerHTML += "超連結被點擊了!<br>";
+}, true);
+</script>
+</body>
+</html>

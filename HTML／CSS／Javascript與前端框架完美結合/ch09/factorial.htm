@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Recursive Calls</title> 
+<script>
+function factorial(n){	
+	let x = (n == 1 ? n : n * factorial(n - 1));
+	console.log( n, x)
+    return x;
+};		
+
+console.log( `5 != ${factorial(5)}` )
+</script>
+
+</head>
+</html>

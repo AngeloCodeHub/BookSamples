@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>accordion</title>
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<Style>
+button{width:10rem;margin:0.2rem}
+</style>
+<body class="m-2">
+
+<div class="panel-group" id="accordion">
+	<div class="panel">
+		<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse1">金陵圖</button>     
+		<div id="collapse1" class="collapse" data-bs-parent="#accordion">
+			誰謂傷心畫不成，畫人心逐世人情。<br>君看六幅南朝事，老木寒雲滿故城。
+		</div>
+    </div>
+	<div class="panel">
+		<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse2">與諸子登峴山</button>     
+		<div id="collapse2" class="collapse" data-bs-parent="#accordion">
+			人事有代謝，往來成古今。江山留勝蹟，我輩復登臨。<br>
+			水落魚梁淺，天寒夢澤深。羊公碑字在，讀罷淚沾襟。
+		</div>
+    </div>
+	<div class="panel">
+		<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse3">烏衣巷</button>     
+		<div id="collapse3" class="collapse" data-bs-parent="#accordion">			
+			朱雀橋邊野草花，烏衣巷口夕陽斜。<br>
+			舊時王謝堂前燕，飛入尋常百姓家。
+		</div>
+    </div>
+</div>
+    
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

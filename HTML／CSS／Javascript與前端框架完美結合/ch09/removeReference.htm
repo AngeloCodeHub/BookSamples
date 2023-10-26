@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>remove reference</title> 
+<script>
+
+const myfunc = (a, b) => `${a}+${b}=${a + b}`;
+
+console.log(myfunc(10,20));
+myfunc = null;
+console.log(myfunc(10,20));
+</script>
+</head>
+</html>

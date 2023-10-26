@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8">
+<title>Storage</title>  
+<link rel=stylesheet type="text/css" href="css/style.css">
+<script> 
+
+window.addEventListener('load', () => {
+		if(typeof(Storage)=="undefined")
+		{
+		    alert("Sorry!!您的瀏覽器不支援Web Storage");		
+		}else{		
+			btn_save.addEventListener("click", saveToLocalStorage);
+			btn_load.addEventListener("click", loadFromLocalStorage); 
+		}
+})
+
+function saveToLocalStorage(){
+	let name = document.getElementById("username").value; 
+	let vehicle = document.querySelector('input[name="vehicle"]:checked').value;
+	if (name == ""){
+		alert("請輸入姓名");
+		return false;
+	}
+	localStorage.username = name;
+	localStorage.vehicle = vehicle;
+	show_LocalStorage.innerHTML = "儲存成功!";
+}
+
+function loadFromLocalStorage(){
+	if (localStorage.username != null && localStorage.vehicle != null)
+	{
+		show_LocalStorage.innerHTML = "姓名：" + localStorage.username +" <br>交通工具：" + localStorage.vehicle;
+	}else{
+		show_LocalStorage.innerHTML = "無問券資料";
+	}
+}
+</script> 
+</head> 
+<body>
+<fieldset>
+<legend>通勤(學)使用交通工具調查</legend>
+<form method="post" action="" id="frm">
+    姓名：<input type="text" id="username" value=""><br>  
+	最常使用的交通工具：<br>
+	<input type="radio" class="vehicle" id="vehicle1" name="vehicle" value="步行">
+	<label for="vehicle1">步行</label><br>
+	<input type="radio" class="vehicle" id="vehicle2" name="vehicle" value="騎自行車" checked>
+	<label for="vehicle2">騎自行車</label><br>
+	<input type="radio" class="vehicle" id="vehicle3" name="vehicle" value="騎機車">
+	<label for="vehicle3">騎機車</label><br>
+	<input type="radio" class="vehicle" id="vehicle4" name="vehicle" value="自用小客車">
+	<label for="vehicle4">自用小客車</label><br>
+	<input type="radio" class="vehicle" id="vehicle5" name="vehicle" value="公共運輸工具">
+	<label for="vehicle5">公共運輸工具</label><br>    
+    <button type="button" id="btn_save">儲存至local storage</button> 
+    <button type="button" id="btn_load">從local storage讀取資料</button> 
+</form>
+<div id="show_LocalStorage"></div>
+</fieldset>
+
+</body> 
+</html>

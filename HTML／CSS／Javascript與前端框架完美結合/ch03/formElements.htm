@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form表單</title>
+</head>
+<body>
+<form name="frm" method="post" action="">	
+		<p>
+		<label for="username">請輸入姓名：</label> 
+		<input type="text" name="username" id="username">
+		</p>
+		<p>
+		<label for="birthday">出生日期：</label>   
+		<input name="birthday" id="birthday" type="date"> 
+		</p> 		
+		<fieldset>
+		<legend>興趣</legend>
+		<input name="checkbox" id="sport" type="radio" value="運動" checked><label for="sport">運動</label>  
+		<input name="checkbox" id="travel" type="radio" value="旅遊"><label for="travel">旅遊</label>
+		<input name="checkbox" id="music" type="radio" value="聽音樂"><label for="music">聽音樂</label>
+		</fieldset>		
+		<p>
+		<button type="submit" name="submitbtn">確定送出</button>
+		<button type="reset" name="resetbtn">取消重設</button>
+		</p>
+</form>
+
+</body>
+</html>

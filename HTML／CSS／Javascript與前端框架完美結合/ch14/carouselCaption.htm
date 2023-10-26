@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>carousel-caption</title>
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+	<!--建立carousel物件-->
+	<div id="carouselSlides" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+	  <!--個別幻燈片按鈕-->
+	  <div class="carousel-indicators">
+		<button type="button" data-bs-target="#carouselSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		<button type="button" data-bs-target="#carouselSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		<button type="button" data-bs-target="#carouselSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	  </div>
+	  <!--幻燈片內容-->
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="images/carousel/s1.jpg" class="d-block w-100" alt="第一張圖">
+		  <!--第一張圖字幕-->
+		  <div class="carousel-caption">
+			<h5>仙人掌多肉</h5>
+			<p>植物能在氣候或土壤乾旱的條件下擁有肥大的葉或莖或根莖，以利於儲存大量的水分，主要生長於熱帶和亞熱帶地區，如草原、半沙漠、沙漠及海岸乾旱地區。</p>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <img src="images/carousel/s2.jpg" class="d-block w-100" alt="第二張圖">
+		  <!--第二張圖字幕-->
+		  <div class="carousel-caption d-none d-md-block">
+			<h5 class="text-white">景天科多肉</h5>
+			<p class="text-white">容易群生的生長方式、及花型的樣貌遺傳到朧月，葉長且厚實，葉子有明顯的幾何稜角及淡淡的白粉，光滑下凹，背面較為圓潤，每一朵最大直徑不超過成人手掌大小，種植超過兩年容易木質化成老欉姿態。</p>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <img src="images/carousel/s3.jpg" class="d-block w-100" alt="第三張圖">
+		  <!--第三張圖字幕-->
+		  <div class="carousel-caption d-none d-md-block">
+			<h5>硬葉系百合科多肉</h5>
+			<p class="">「十二之卷」是硬葉系百合科多肉的代表品種，葉子上有白色像是糖霜的凸出紋路，在送禮盆栽組上很常見，尾端尖尖的，實際上不刺不傷人，摸起來反而硬硬 QQ 的，有另一種扎實的療癒感。</p>
+		  </div>
+		</div>
+	  </div>
+		<!--加入上一項與下一項按鈕-->
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlides" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-bs-target="#carouselSlides" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	  </button>
+	</div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+ <Script>
+const carousel = new bootstrap.Carousel("#carouselSlides", {
+  interval: 5000
+});
+
+const myCarousel = document.getElementById('carouselSlides');
+myCarousel.addEventListener('slide.bs.carousel', function (e) {
+  console.log("觸發", e.from)
+})
+ </script>
+</body>
+</html>
+

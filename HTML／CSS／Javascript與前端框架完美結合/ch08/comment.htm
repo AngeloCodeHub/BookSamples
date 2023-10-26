@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS註解</title>
+<script>
+const cal = () => {
+	/* 
+	*********************
+	函數功能：計算x+y，並顯示計算結果
+	撰寫：Eileen
+	日期：20220415 
+	******************
+	*/
+	let x, y;  //宣告x、y變數
+	x = 2;	   
+	y = 3;
+	//輸出x+y的結果
+	document.getElementById("message").innerHTML = ("x + y = " + (x + y));
+};
+
+window.onload = cal;
+</script>
+</head>
+<body>  
+<div id="message"></div>
+</body>
+</html>

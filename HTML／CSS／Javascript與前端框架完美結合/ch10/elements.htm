@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html> 
+<head> 
+<meta charset="UTF-8">
+<title>物件</title>
+<script>
+function showAllElements()
+{	
+	let all = document.getElementsByTagName("*");
+	let tagname="目前文件內共有 "+ all.length + " 個物件<br>";
+	for (i = 0; i < all.length; i++) {  
+	   tagname += all[i].tagName + "、";
+	}
+	showAllItems.innerHTML = tagname;
+}
+
+</script>
+</head>
+<body>
+<div id="showAllItems"></div>
+<hr>
+<div>我是DIV</div>
+<table border=1>
+<tr>
+	<td align="center">我是表格</td>
+</tr>
+</table>
+<form>
+<input type="text" size="20" value="我是文字方塊">
+</form>
+<img src="images/grape.png" border="0"><br>
+<input type="button" name="myButton" value="顯示所有物件" onClick="showAllElements()">
+
+</body>
+</html>

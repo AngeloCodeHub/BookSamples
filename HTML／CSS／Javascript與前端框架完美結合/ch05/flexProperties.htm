@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>inline-flex Container</title>
+	<style>
+	html,body{
+	  height: 100%;
+	}
+	h3,h4{
+	  color: #3F5D45;
+	}
+	.flex_container {
+		display:inline-flex;
+		border:solid 5px #ff0000;
+		height: 100%;
+		padding: 0 5px;
+	}
+	.box {
+		background-color: #EAF0ED;
+	  margin: 10px 5px;
+	  border-radius:10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="flex_container">
+		
+	  <div class="box">
+		<img src="images/coffee.jpg">
+		<h1>咖啡</h1>
+	  </div>
+	  <div class="box">
+		<div class="con">
+		  <h3>咖啡品種</h3>
+		  <p>市面上的咖啡主要為阿拉比卡（Coffea Arabica）與羅布斯塔（Coffea Robusta）還有賴比瑞亞（Coffea Liberica）三個原種。</p>
+		  <h4>每人每日咖啡因攝取量以不超過300mg</h4>
+		</div>    
+	  </div>
+	</div>
+</body>
+</html>

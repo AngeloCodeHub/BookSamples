@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function Expressions</title> 
+<script>
+
+function checkflag(flag){  //函式宣告式
+	let myfunc = null;
+	if (flag) {
+	   myfunc = (a, b) => `${a}+${b}=${a + b}`;   //函式表達式
+	}else{
+	   myfunc = (a, b) => `${a}*${b}=${a * b}`;   //函式表達式
+	}
+	console.log(myfunc(10,20))
+}
+
+checkflag(true);
+checkflag(false);
+
+</script>
+
+</head>
+</html>

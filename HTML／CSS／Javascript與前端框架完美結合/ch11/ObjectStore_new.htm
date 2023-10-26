@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<title>建立資料庫及初始值</title> 
+
+<script>
+window.addEventListener('load', () => {
+	window.indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB;
+	if (!window.indexedDB) {
+	    alert("您的瀏覽器不支援indexedDB");
+	}
+   	//要新增的資料array
+	const customerData = [
+	  {user_id:"A001", name: "eileen", adress: "高雄市", tel:"07" },
+	  {user_id:"A002", name: "jennifer", adress: "台北市", tel:"02" },
+	  {user_id:"A003", name: "brian", adress: "台北市", tel:"02" }
+	];
+	//開啟資料庫
+	var db = null;
+    var req = indexedDB.open("MyDatabase");
+	req.onsuccess = (evt) => {
+      db = this.result;
+      alert("openDb成功");
+    };
+    req.onerror = (evt) => {
+      alert("開啟資料庫失敗");
+	  console.error("openDb:", evt.target.errorCode);
+    };
+	//onupgradeneeded事件
+    req.onupgradeneeded = (evt) => {
+	  var thisDB = evt.target.result;
+	  //建立objectStore
+	  if (!thisDB.objectStoreNames.contains("customer")) {
+		  var objectStore = thisDB.createObjectStore("customer", { keyPath: "No", autoIncrement : true });
+		  objectStore.createIndex("name", "name", { unique: false });
+		  objectStore.createIndex("user_id", "user_id", { unique: true });
+
+		  //新增資料到objectStore
+		  customerData.forEach(function(user){		 
+			objectStore.add(user);
+		  })
+	  }
+	};
+})
+</script>
+</head>
+<body>
+</body>
+</html>

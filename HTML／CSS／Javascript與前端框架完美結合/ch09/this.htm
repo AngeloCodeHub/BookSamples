@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>this</title> 
+<script>
+
+var color = "green";
+
+function showColor() {
+	return this.color;
+}
+
+let car = {
+  color : "red",
+  drive : showColor
+}
+
+let carA = { color: 'blue' };   //定義新的carA物件
+carA.drive = showColor;			//將showColor函式指定給carA
+
+console.log(car.drive());   //red
+console.log(carA.drive());  //blue
+console.log(showColor());  //green
+
+</script>
+</head>

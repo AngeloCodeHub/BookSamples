@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>屬性的讀取與設定</title>
+<style>
+td{text-align:center;color:#ffffff}
+</style>
+<script>
+function changeBorderWidth(px){
+		let showTable = document.getElementById("myTable");
+		showTable.setAttribute("border",px);  //設定屬性值
+		document.getElementById("showMessage").value="表格寬度："+showTable.getAttribute("width");  //取得屬性值
+}
+</script>
+</head>
+<body>
+<input type="text" id="showMessage">
+<table id="myTable" width="200" cellspacing="2" cellpadding="2" border="1" bgcolor="#775B59">
+     <tr id="Tr1" bgcolor="#32161F"> 
+		<td>數學</td>
+		<td>英文</td>
+		<td>國文</td>
+     </tr>
+     <tr id="Tr2"> 
+        <td>90</td>
+        <td>60</td>
+        <td>80</td>
+     </tr>
+     <tr id="Tr2"> 
+        <td>80</td>
+        <td>86</td>
+        <td>98</td>
+     </tr>
+     </table><br>
+     <button onclick="changeBorderWidth(1);">1px</button>
+     <button onclick="changeBorderWidth(5);">5px</button>
+     <button onclick="changeBorderWidth(10);">10px</button>
+</body>
+</html>

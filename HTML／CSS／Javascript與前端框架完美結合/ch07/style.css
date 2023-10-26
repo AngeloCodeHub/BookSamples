@@ -1,0 +1,120 @@
+html, body{
+    margin: 0;
+}
+
+header{
+  position: fixed;	/*固定定位*/
+  top: 0;			/*與父元素的上邊緣距離設定為0*/
+  width: 100%;		/*寬度*/
+  height: 90px;		/*高度*/
+  background-color: #904E55;  /*設定背景顏色*/
+  color: #FAE4C4;	/*設定文字顏色*/
+}
+footer{
+  position: fixed;
+  bottom: 0;        /*與父元素的下邊緣距離設定為0*/
+  width: 100%;
+  height: 60px;
+  background-color: #564E58;
+  color: #FAE4C4;   
+}
+
+header > nav{
+  display: flex;        /*flex排列*/
+  align-items: center;  /*垂直置中*/  
+  padding: 12px 30px;   /*填充距離：上下邊距12px  左右30px*/
+}
+footer > nav{
+  display: flex;        /*flex排列*/
+  justify-content: space-between;
+  align-items: center;  /*垂直置中*/
+  padding-left:30px;
+}
+
+ul{
+  margin: 0;              /*四周邊距設為0*/
+  list-style-type: none;  /*移除ul的項目符號*/
+}
+li{
+  padding: 10px 20px;
+  float: left;          /*設定為靠左浮動*/
+  font-size:20px;       /*文字大小*/
+}
+
+a:link, a:visited {   /*超連結的link樣式與visited樣式*/
+  color: #FFFFFF;
+  text-decoration: none;    /*設為無底線*/
+}
+a:hover, a:active {    /*超連結的hover樣式與active樣式*/
+  color: #ffff00;
+}
+li a:hover, li a:active { color: #FB9400;}     /*li元素內的超連結hover樣式與active樣式*/
+
+main{
+  margin: 100px 0;    /*上下邊距為100px 左右邊距為0*/
+}
+
+:target:before {
+	content: "";
+	display: block;
+	height: 90px;
+}
+
+fieldset{
+  background-color: #F2EFE9; 
+  border-radius: 15px;  /*導圓角*/
+  margin: 50px;
+  border: 0;    /*設定為無邊線*/
+}
+legend{
+  background-color: #BFB48F;  
+  padding: 10px;		/*填充距離*/
+  margin-left: 10px;	/*左外邊距*/
+  width: 100px;
+  border-radius: 5px;
+}
+legend p{
+  margin: 0;			/*邊距為0*/
+  text-align: center;	/*文字水平置中*/	
+  font-weight: bold;	/*文字設為粗體*/
+}
+
+/*icomoon font*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?o2jrzf');
+  src:  url('fonts/icomoon.eot?o2jrzf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?o2jrzf') format('truetype'),
+    url('fonts/icomoon.woff?o2jrzf') format('woff'),
+    url('fonts/icomoon.svg?o2jrzf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-youtube1:before {
+  content: "\ea9d";
+}
+
+/**/

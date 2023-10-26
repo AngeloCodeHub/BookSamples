@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html> 
+<head> 
+<meta charset="UTF-8">
+<title>取得元件</title> 
+<style>
+*{
+	font-size:20px;
+	font-family: Microsoft JhengHei;
+	text-align:center;
+}
+</style>
+<script>
+function chgBorder(){
+	document.getElementById('myImg').border="5";
+	document.getElementById('myImg').style.borderStyle="double";
+	document.getElementsByTagName('div')[1].innerHTML="您按下了「圖片加框線」按鈕";
+}
+function chgColor(){
+	let div = document.getElementsByTagName('div')[1];
+	div.style.cssText = "color: blue;font-size:25px;";
+	div.innerHTML="您按下了「改變字體顏色」按鈕";
+}
+
+</script>
+</head> 
+<body> 
+	<!--圖片-->
+	<img id="myImg" src="images/grape.png" BORDER="0">
+	<br>
+	<div>執行結果</div>
+	<div></div>
+	<!--按鈕-->
+	<input type="button" onclick="chgBorder()" value="圖片加框線">
+	<input type="button" onclick="chgColor()" value="改變字體顏色">
+</body> 
+</html> 

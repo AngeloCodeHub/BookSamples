@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.container1 {
+  display: flex;
+  flex-direction:row
+}
+.container2 {
+  display: flex;
+  flex-direction:row-reverse
+}
+.container3 {
+  display: flex;
+  flex-direction:column
+}
+.container4 {
+  display: flex;
+  flex-direction:column-reverse
+}
+.item {
+  background: #bb0;
+  color: #0ff;
+  margin: 15px;
+  padding: 15px;
+}

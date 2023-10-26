@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增資料</title> 
+<link rel=stylesheet type="text/css" href="css/style.css">
+<style>
+div{border:2px dotted #ff0000;padding:5px;margin-top:5px}
+</style>
+<script>
+window.addEventListener('load', () => {
+    
+	window.indexedDB = window.indexedDB || window.mozIndexedDB || 	window.webkitIndexedDB || window.msIndexedDB;
+	if (!window.indexedDB) {
+		alert("您的瀏覽器不支援indexedDB");
+	}
+
+	/*********
+	openDB() 開啟資料庫	
+	DB_tx() 開啟交易
+	addOrPutData() 新增資料
+	********/
+	
+	function openDB() {
+	  var req = indexedDB.open(dbName, version);
+
+	  req.onsuccess = (e) => {
+		message.innerHTML = "openDB success!";
+		db = e.target.result;
+	  };
+
+	  req.onerror = (e) => {
+		message.innerHTML = "openDB error";
+	  };
+
+	  req.onupgradeneeded = (e) => {
+	  var thisDB = e.target.result;
+	  if (!thisDB.objectStoreNames.contains(storeName)) {
+		  var objectStore = thisDB.createObjectStore(storeName, { keyPath: "No", autoIncrement : true });
+		  objectStore.createIndex("user_id", "user_id", { unique: true });
+		  objectStore.createIndex("name", "name", { unique: false });
+		}
+	  };
+	}
+	function DB_tx(storeName, mode) {
+		let tx = db.transaction(storeName, mode);
+		tx.onerror = (e) => {
+		  console.error(e);
+		};
+		return tx;
+	}
+	
+	function addOrPutData() {
+	  let tx = DB_tx(storeName, 'readwrite');
+	  let store = tx.objectStore(storeName);
+
+	  let user_id = document.getElementById("user_id").value.trim();
+	  let name = document.getElementById("name").value.trim();
+	  let email = document.getElementById("email").value.trim();
+
+	  value = {
+		  user_id, 
+		  name, 
+		  email
+	  };
+	  value.timestamp = new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'});
+
+	  let r = null;
+	  let memo = "";
+
+	  r = store.add(value);
+	  
+	  r.onsuccess = (e) => {
+		message.innerHTML += "<br>資料新增成功!<br>" + JSON.stringify(value);
+	  };
+
+	  r.onerror = (e) => {
+		message.innerHTML = "<br>資料新增失敗!<br>" + e.target.error.message;
+	  };
+	}
+
+	var db = null;
+	const dbName = "MyDatabase";
+	const storeName = "customer";
+	const version = 1;
+
+	openDB();
+	
+	addbtn.onclick = (e) => {
+		addOrPutData('add')
+	}
+	
+})
+</script>
+</head>
+<body>
+<label for="user_id">帳號：</label><input type="text" id='user_id'><br>
+<label for="name">姓名：</label><input type="text" id='name'><br>
+<label for="email">E-Mail：</label><input type="text" id='email'><br>
+<button id="addbtn" class="btn">新　增</button>
+<div id="message"></div>
+</body>
+</html>
