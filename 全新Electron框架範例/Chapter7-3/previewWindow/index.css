@@ -1,0 +1,33 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #000;
+    font-size: 16px;
+}
+
+#save-btn{
+    top: 25px;
+    right: 100px;
+    cursor:pointer;
+}
+
+#close-btn{
+    top: 25px;
+    right: 10px;
+    cursor:pointer;
+}
+
+#preview{
+    margin-top: 25px;
+}
