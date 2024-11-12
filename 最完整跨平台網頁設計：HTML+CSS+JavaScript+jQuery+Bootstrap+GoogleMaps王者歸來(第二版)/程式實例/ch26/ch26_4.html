@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_4.html</title>   
+</head>
+<body>
+<p>Date( ).getDay( )將獲得目前星期幾的資訊</p>
+<button onclick="exFun( )">OK</button>
+<p id="msg"></p>
+<script>
+   function exFun( ) {
+      var dayWeek = new Date( ).getDay( );   // 獲取目前星期幾的資訊
+      switch ( dayWeek ) {
+	     case 0:
+            document.getElementById("msg").innerHTML = "放假日今天是星期日";
+			break;
+		 case 6:
+            document.getElementById("msg").innerHTML = "放假日今天是星期六";
+            break;
+		 default:
+	        document.getElementById("msg").innerHTML = "上班日"; 
+	  }
+   }
+</script>
+</body>
+</html>

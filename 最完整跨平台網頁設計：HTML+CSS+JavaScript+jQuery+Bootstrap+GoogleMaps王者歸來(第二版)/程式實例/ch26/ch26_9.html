@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_9.html</title>   
+</head>
+<body>
+<p>Date( ).getHours將獲得目前時間是幾點的資訊</p>
+<button onclick="exFun( )">OK</button>
+<p id="numHour"></p>
+<p id="msg"></p>
+<script>
+   function exFun( ) {
+      var timeHour = new Date( ).getHours( );   // 獲取目前幾點的資訊
+	  var txtText;
+	  txtText = ( timeHour > 11 ) ? "下午" : "早上";
+      document.getElementById("numHour").innerHTML = "Hours = " + timeHour;
+	  document.getElementById("msg").innerHTML = "現在是 " + txtText;
+   }
+</script>
+</body>
+</html>

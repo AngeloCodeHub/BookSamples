@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch20_49.html</title> 
+   <style>
+      a { text-decoration:none; }  	 /* 設定超連結不含底線            */ 
+      img { max-width:100%; }            /* 設定影像上限是整個螢幕寬度    */
+      .logo { 
+         width:200px; 
+         margin-top:10px 
+      }                                  /* 設定logo寬200px, 上方間距10px */
+      .onlynav { 
+         display: flex; 
+         list-style:none; 
+      }                                  /* 設定彈性容器                  */
+      .onlynav li { margin-left: 20px; } /* 項目符號距離左邊的距離        */
+      .onlynav a:hover { color: brown; } /* 滑鼠在超連結的顏色            */
+      .headerAndnav {
+         display:flex;
+         justify-content:space-between;
+      }                                  /* 項目符號移至右上方            */
+      .header-wrap { padding: 0 5%; }    /* 兩邊留間距 5%                 */
+      .webcontent {
+         text-align:center;
+         margin-top:10%;
+      }                                  /* 設定標題內容置中和留白        */
+      .webcontent p { margin:10px 0 40px; }   /* 設定斷落的留白           */
+      .webtitle { font-size:5rem }
+      .button {
+         font-size: 1.5rem;
+         background: blueViolet;
+         color: white;
+         border-radius: 3px;
+         padding: 20px 30px;
+      }                                  /* 設定按鈕外觀                  */
+      .button:hover {
+         background: chocolate;
+      }                                  /* 滑鼠在超連結的顏色            */
+      .mybackground {
+         background-size: cover;
+         background-position: center top;
+         background-repeat: no-repeat;
+      }                                  /* 圖片成比例放大到視窗大小       */
+      #home {
+         background-image: linear-gradient(to top right, red, yellow 30%, green);
+         min-height: 100vh;
+      }                                  /* 背景用線性輻射處理             */
+   </style>                              
+</head>
+<body>
+   <main id="home" class="mybackground">
+      <header class="headerAndnav header-wrap">
+         <img class="logo" src="sseremove.png" alt="王者歸來logo">
+         <nav>
+             <ul class="onlynav">
+                 <li><a href="news.html">最新消息</a></li>
+                 <li><a href="query.html">查詢</a></li>
+                 <li><a href="mail.html">聯絡</a></li>
+             </ul>
+         </nav>
+      </header>
+   
+      <div class="webcontent">
+         <h1 class="webtitle">洪錦魁</h1>
+         <p>一位跨越電腦作業系統與科技時代的電腦專家,著作等身的作家</p>
+         <a class="button" href="hungbook.html">著作</a>
+      </div>
+   </main>
+</body>
+</html>

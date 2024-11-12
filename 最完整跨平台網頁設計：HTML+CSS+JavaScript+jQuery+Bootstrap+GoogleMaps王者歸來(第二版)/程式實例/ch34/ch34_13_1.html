@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>ch34_13_1.html</title>
+   <style>     
+      #myMap { width:100%; height:500px;}
+   </style>
+<body>
+   <div id="myMap"></div>
+<script>
+   function displayMap() {      
+      var myCenter = new google.maps.LatLng(25.040129, 121.560036);
+      var objMap = document.getElementById("myMap");
+      var mapInfo = {center: myCenter, zoom:15};
+      var locMap = new google.maps.Map(objMap, mapInfo);		 
+      var marker = new google.maps.Marker({
+	               position:myCenter,                         // 設定標記位置
+				   icon:"hung.jpg" });                        // 設定圖像標記 
+      marker.setMap(locMap);                                  // 執行標記
+	  
+// 增加事件監聽觸發marker物件時執行myFun	  
+	  google.maps.event.addListener(marker,"click", myFun);     // 增加click事件監聽
+	  function myFun( ) {                                       
+	     var locInfo = new google.maps.InfoWindow({             // 設定輸出內容
+                       content:"早安台北!" });
+         locInfo.open(locMap,marker);                           // 輸出所設定內容
+      };		 	  	  
+   }
+</script>
+<!-- key=XXX=myMap間的XXX讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

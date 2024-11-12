@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch24_6.html</title>
+   <style>
+      h1 { color:blue; }
+      ul {
+	     list-style:none;             /* 移除原先項目符號 */
+		 padding:0px; 
+	  }
+	  li {
+	     padding-left:10px;
+	  }
+	  li:before {                     
+	     content:"◎";                 /* 插入新的項目符號 */
+		 padding-right:5px;
+		 color:blue;
+	  }	  
+   </style>   
+</head>
+<body>
+<h1>台灣著名科技大學</h1>
+<ul>
+   <li>明志科技大學</li>
+   <li>台灣科技大學</li>
+   <li>台北科技大學</li>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>ch34_7.html</title>
+   <style>     
+      #myMap { width:100%; height:400px;}
+   </style>
+<body>
+   <div id="myMap"></div>
+<script>
+   function displayMap() {      
+      var myCenter = new google.maps.LatLng(25.040129, 121.560036);
+      var objMap = document.getElementById("myMap");
+      var mapInfo = {center: myCenter, zoom:15};
+      var locMap = new google.maps.Map(objMap, mapInfo);		 
+      var marker = new google.maps.Marker({
+	               position:myCenter,                     // 設定標記位置
+				   animation:google.maps.Animation.BOUNCE }); // 設定動態標記 
+      marker.setMap(locMap);                                  // 執行標記
+   }
+</script>
+<!-- YOUR_API_KEY讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

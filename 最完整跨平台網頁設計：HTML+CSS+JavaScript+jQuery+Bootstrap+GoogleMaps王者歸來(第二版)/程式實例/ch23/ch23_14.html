@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch23_14.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { transformm:rotateZ(0deg); }
+		 25% { transform:rotateZ(90deg); }
+		 50% { transform:rotateZ(180deg); }
+         75% { transform:rotateZ(270deg); }
+		 100% {transform:rotateZ(360deg); }
+      }
+	  img {
+	     width:100px; height:150px;
+		 object-fit:fill;
+		 border:1px solid blue;
+		 left:100px; top:20px;
+		 position:relative;
+		 animation:my-animation 6s infinite linear;
+	  }	 
+   </style>   
+</head>
+<body>
+<img src="hung.jpg">
+</body>
+</html>

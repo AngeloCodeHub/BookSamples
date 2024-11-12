@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_6.html</title>   
+</head>
+<body>
+<p>JavaScript for loop</p>
+<p id="msg"></p>
+<script>
+   var strText = "";      // 定義字串變數
+   var i;                 // 迴圈指標
+   var sum = 0;           // 加總
+   for ( i = 1; i <= 5; i++ ) {
+      sum += i;
+      strText += "Loop = " + i + ", sum = " + sum + "<br>";
+   }
+   document.getElementById("msg").innerHTML = strText;	  
+</script>
+</body>
+</html>

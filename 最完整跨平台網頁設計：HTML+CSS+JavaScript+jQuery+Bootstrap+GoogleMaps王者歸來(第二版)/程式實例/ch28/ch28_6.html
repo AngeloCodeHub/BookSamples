@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch28_6.html</title> 
+   <script>
+      var idTime;
+      function stopTime ( ) {                      // 詢問是否繼續
+	     var intBoolean = confirm("是否繼續計時?");
+		 if ( intBoolean == false ) {
+		    status = "計時結束";                   // 列出計時結束
+			clearTimeout( idTime );                // 計時結束
+         } else {
+            counterTime( );                        // 重新計時
+         }			
+	  }   
+      function counterTime( ) {                    // 設定計時
+	     status = "計時中 ... "                    // 列出計時中字串
+		 idTime = setTimeout( stopTime, 3000);     // 計時是3秒
+	  }
+   </script>		 
+</head>
+<body>
+<p>Window計時器運作</p>
+<form>                                    <!-- 啟動計時 -->
+   <input type="button" onclick="counterTime( )" value="Timer">
+</form>
+</body>
+</html>

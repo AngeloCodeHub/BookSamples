@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch23_11.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { transformm:rotate(0deg); }
+		 25% { transform:rotate(90deg); }
+		 50% { transform:rotate(180deg); }
+         75% { transform:rotate(270deg); }
+		 100% {transform:rotate(360deg); }
+      }
+	  img {
+	     width:100px; height:150px;
+		 object-fit:fill;
+		 border:1px solid blue;
+		 left:200px; top:200px;
+		 position:relative;
+		 animation:my-animation 6s infinite linear;
+		 transform-origin:left top; /* 旋轉點在左上角 */
+	  }	 
+   </style>   
+</head>
+<body>
+<img src="hung.jpg">
+</body>
+</html>

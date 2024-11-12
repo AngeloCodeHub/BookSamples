@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_8.html</title>   
+</head>
+<body>  
+<div id="mybook">                                
+   <h1>我的著作</h1>
+   <p>一個人的極境旅行南極大陸北極海</p>
+   <p>邁向賭神之路台灣麻將必勝秘笈</p>
+</div>
+<p id="ex0"></p>                              <!-- 預計存放資料筆數 -->
+<p id="ex1"></p>                              <!-- 預計存放結果陣列 -->          
+<script>
+   var i;                                          // 索引
+   var txt = "";                                   // 暫存字串
+   var xbook = document.getElementById("mybook");  // 取的id是mybook   
+   var exInfo = xbook.getElementsByTagName("p");   // 取得tag是p
+   var lengthInfo = exInfo.length;                 // 傳回資料數量
+   for ( i = 0; i < lengthInfo; i++ ) {
+      txt += exInfo[i].innerHTML + "<br>"
+   }
+   document.getElementById("ex0").innerHTML = "資料筆數 = " + i; 
+   document.getElementById("ex1").innerHTML = txt;
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch20_54.html</title> 
+   <style>
+      main {width:100%; height:200px; }
+      a { text-decoration:none; }  	     /* 設定超連結不含底線            */ 
+      img { max-width:100%; }            /* 設定影像上限是整個螢幕寬度    */
+      .logo { 
+         width:200px; 
+         margin-top:10px 
+      }                                  /* 設定logo寬200px, 上方間距10px */
+      .onlynav { 
+         display: flex; 
+         list-style:none; 
+      }                                  /* 設定彈性容器                  */
+      .onlynav li { margin-left: 20px; } /* 項目符號距離左邊的距離        */
+      .onlynav a:hover { color: brown; } /* 滑鼠在超連結的顏色            */
+      .headerAndnav {
+         display:flex;
+         justify-content:space-between;
+      }                                  /* 項目符號移至右上方            */
+      .header-wrap { padding: 0 5%; }    /* 兩邊留間距 5%                 */
+      .webcontent {
+         text-align:center;
+         margin-top:10%;
+      }                                  /* 設定標題內容置中和留白        */     
+      .mybackground {
+         background-size: cover;
+         background-position: center top;
+         background-repeat: no-repeat;
+      }                                  /* 圖片成比例放大到視窗大小       */
+      main {
+         background-image: url(sea.jpg), linear-gradient(to top right, red, yellow 30%, green);
+         background-blend-mode:hard-light;
+         height:250px;
+		  margin-bottom:10px;
+      }                                  /* 設定背景圖片與色彩的混合模式    */
+	  main .page-title {
+         text-align: center;
+		 color:blue;
+		 font-size:3rem
+      }                                  /* main頁首標題樣式               */
+	  footer {
+	     text-align: center;
+	     background: lightgreen;
+		 padding:3px 0;
+	  }                                   /* main頁尾樣式                  */
+	  footer p {
+	     color:blue;
+		 font-size:1rem;
+	  }                                   /* main頁尾版權所有樣式           */
+	  article { width:74%; }              /* article寬度比例70%             */
+	  aside {width:22%; }                 /* aside寬度比例  25%             */
+	  .bookcontents {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 50px;
+      }                                   /* 設定article和aside在版面中央   */
+	  .bookinfo {
+         position: relative;
+         padding-top: 4px;
+         margin-bottom: 40px;
+      }                                   /* 書籍訊息                       */
+      .bookfocus {
+	     color:red;  
+         background: yellow;
+         border-radius: 50%;        
+         width: 100px;
+         height: 100px;
+         font-size: 1.5rem;
+         text-align: center;
+         position: absolute;
+         top: 0;
+         padding-top: 10px;
+      }                                    /* article標題內容                */
+   </style>                              
+</head>
+<body>
+   <main id="home" class="mybackground">
+      <header class="headerAndnav header-wrap">
+         <img class="logo" src="sseremove.png" alt="王者歸來logo">
+         <nav>
+             <ul class="onlynav">
+                 <li><a href="news.html">最新消息</a></li>
+                 <li><a href="query.html">查詢</a></li>
+                 <li><a href="mail.html">聯絡</a></li>
+             </ul>
+         </nav>
+      </header> 
+      <div class="wrapper">
+	     <h1 class="page-title">洪錦魁最新著作</h1>
+      </div>	  
+   </main>
+   <div class="bookcontents header-wrap">
+      <article>
+         <header class="bookinfo">
+            <h2 class="booktitle">Excel VBA</h2>
+            <p class="bookfocus">Hot!<br>閱讀焦點<br>Hot!</p>
+            <p class="booknew">全新上市</p>
+         </header>
+      </article>
+
+      <aside>
+             Aside側邊區域
+      </aside>
+   </div>
+   <footer>
+      <div class="footer-wrapper"> 
+	     <p>&reg 版權所有 &reg</p>
+	  </div>
+   </footer>	  
+</body>
+</html>

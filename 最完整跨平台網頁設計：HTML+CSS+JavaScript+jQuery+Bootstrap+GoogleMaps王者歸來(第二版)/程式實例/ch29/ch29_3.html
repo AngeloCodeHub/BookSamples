@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_3.html</title>   
+</head>
+<body>
+<p>DOM觀念應用</p>
+<p>使用getElementByTagName方法取得元素內容</p>
+<p>HTML5+CSS3+JavaScript</p>
+<p id="ex0"></p> 
+<p id="ex1"></p>
+<p id="ex2"></p>               
+<script>
+   var exInfo = document.getElementsByTagName("p");        // 取得段落<p>內容
+   document.getElementById("ex0").innerHTML = "p(0) = " + exInfo[0].innerHTML; 
+   document.getElementById("ex1").innerHTML = "p(1) = " + exInfo[1].innerHTML;
+   document.getElementById("ex2").innerHTML = "p(2) = " + exInfo[2].innerHTML;
+</script>
+</body>
+</html>

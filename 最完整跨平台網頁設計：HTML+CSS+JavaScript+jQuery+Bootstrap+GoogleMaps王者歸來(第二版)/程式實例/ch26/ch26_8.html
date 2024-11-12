@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_8.html</title>   
+</head>
+<body>
+<p>JavaScript for loop using  do ...while</p>
+<p id="msg"></p>
+<script>
+   var strText = "";      // 定義字串變數
+   var i = 1;             // 迴圈指標
+   var sum = 0;           // 加總
+   do {
+      sum += i;
+      strText += "Loop = " + i + ", sum = " + sum + "<br>";
+	  i++;
+   } while ( i <= 5 );
+   document.getElementById("msg").innerHTML = strText;	  
+</script>
+</body>
+</html>

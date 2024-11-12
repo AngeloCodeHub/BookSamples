@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch9_10.html</title> 
+</head>
+<body>
+<form action="cgi-bin/get.exe" method="get">
+   <h1>歡迎進入DeepStone外語能力調查系統</h1>
+   <p>請留個人資料</p>
+   <p>姓名:<input type="text" name="user" autofocus></p>
+<!-- 建立年年齡分析資料 -->
+   <p>年齡:<br>
+   <input type="number" name="num" min="1">
+   </p>
+<!-- 建立外語能力分析資料 -->
+   <p>外語能力分析資料:<br>
+   <input type="checkbox" name="language" value="Ja">日語<br>
+   <input type="checkbox" name="language" value="En">英語<br>
+   <input type="checkbox" name="language" value="Fr">法語<br>
+   <input type="checkbox" name="language" value="De">德語<br>
+   </p>
+</form>
+</body>
+</html>

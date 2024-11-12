@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch9_21.html</title> 
+</head>
+<body>
+<form action="cgi-bin/get.exe" method="get">
+   <h1>歡迎進入DeepStone民調系統</h1>
+   <p>請留個人資料</p>
+   <p>
+      <label>姓名:<input type="text" name="user" autofocus></label>
+   </p>
+<!-- 建立年性別分析資料 -->
+   <p>性別:</p>
+   <p>
+      <input type="radio" name="sex" value="1" id="M">
+      <label for="M">男性</label>
+      <input type="radio" name="sex" value="0" id="F">
+      <label for="F">女性</label>
+   </p>
+<!-- 建立軟體能力分析資料 -->
+   <p>軟體能力分析資料:<br>
+   <p>
+      <input type="checkbox" name="softw" value="html" id="HT">
+      <label for="HT">HTML5</label>
+      <input type="checkbox" name="softw" value="css" id="CS">
+	  <label for="CS">CSS3</label>
+   </p>
+</form>
+</body>
+</html>

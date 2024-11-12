@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch33_85.html</title> 
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+   <h4>Accordion實例</h4>
+   <div id="accordion">
+      <div class="card">
+         <div class="card-header">
+            <a class="card-link" data-bs-toggle="collapse" href="#page1">
+               明志科技大學
+            </a>
+         </div>
+         <div id="page1" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body bg-primary text-white">
+                一所優質科技大學創辦人是王永慶
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-header">
+            <a class="collapsed card-link" data-bs-toggle="collapse" href="#page2">
+               長庚科技大學
+            </a>
+         </div>
+         <div id="page2" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body bg-primary text-white">
+                一所優質護理大學創辦人是王永慶
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-header">
+            <a class="collapsed card-link" data-bs-toggle="collapse" href="#page3">
+               長庚大學
+            </a>
+         </div>
+         <div id="page3" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body bg-primary text-white">
+                一所優質大學創辦人是王永慶
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</body>
+</html>

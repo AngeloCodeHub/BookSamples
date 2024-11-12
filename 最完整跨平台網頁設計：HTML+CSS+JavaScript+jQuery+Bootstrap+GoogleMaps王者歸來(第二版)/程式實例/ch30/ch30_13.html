@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch30_13.html</title> 
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("input").focus(function(){
+            $(this).css("background-color", "yellow");
+         });
+         $("input").blur(function(){
+            $(this).css("background-color", "lightgray");
+         });
+      });
+   </script>
+</head>
+<body>
+姓名: <input type="text" name="name">
+<br><br>
+地址: <input type="text" name="address">
+</body>
+</html>

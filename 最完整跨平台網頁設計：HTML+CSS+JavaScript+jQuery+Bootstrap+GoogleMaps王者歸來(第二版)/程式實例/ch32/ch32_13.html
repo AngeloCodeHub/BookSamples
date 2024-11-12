@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch32_13.html</title> 
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <h2>巢狀區塊</h2>
+  <p>區塊內有區塊</p>
+</div>
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-8" style="background-color:yellow;">
+         區塊.col-8
+         <div class="row" style="background-color:lightgray;">
+            <div class="col-6">區塊.col-6</div>
+            <div class="col-6" style="background-color:gold;">區塊.col-6</div>
+         </div>
+      </div>
+      <div class="col-4" style="background-color:lightgray;">區塊.col-4</div>
+  </div>
+</div>
+</body>
+</html>

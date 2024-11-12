@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_11.html</title>   
+</head>
+<body>
+<p id="ex1"></p>
+<p id="ex2"></p>
+<script>
+   var strList = ["Apple", "Orange", "Banana"];
+   var strArray = "";
+   var i;
+   for ( i = 0; i < 3; i++ ) {
+      strArray += "strList[" + i + "] = " + strList[i] + "<br>";  
+   }
+   document.getElementById("ex1").innerHTML = strList;   // 原陣列
+   document.getElementById("ex2").innerHTML = strArray;  // 迴圈處理過的陣列
+</script>
+</body>
+</html>

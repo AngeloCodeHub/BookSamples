@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch22_8.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { color:blue; background-color:lightblue; left:0px; top:0px; }
+         25% { color:green; background-color:lightgreen; left:200px; top:0px; }
+		 50% { color:red; background-color:lightred; left:200px; top:200px; }
+         75% { color:violet; background-color:lightyellow; left:0px; top:200px; }
+		 100% { color:blue; background-color:lightblue; left:0px; top:0px; }
+      }
+	  div {
+	     width:150px;
+		 height:150px;
+		 position:relative;
+		 animation-name:my-animation;
+		 animation-duration:5s;
+		 animation-iteration-count:infinite;
+		 animation-direction:alternate;
+		 animaiton-play-state:running;
+	  }
+      div:hover { animation-play-state:paused; }	  
+   </style>   
+</head>
+<body>
+<div>Silicon Stone</div>
+</body>
+</html>

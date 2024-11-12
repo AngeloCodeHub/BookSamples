@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_39.html</title>  
+   <script>
+      function myEvent( ) {
+	     var txt = document.getElementById("trip").value;
+		 alert("你的選擇是 : " + txt );
+      }
+   </script>
+</head>
+<body>  
+<p>請輸入旅遊地點</p>  
+<select id="trip" onchange="myEvent( )">
+   <option value="北極海">北極海
+   <option value="南極大陸">南極大陸
+   <option value="冰島">冰島
+</select>
+<p>當有選擇新地點時會觸發事件</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_6.html</title>   
+</head>
+<body>                                  
+<p>DOM觀念應用</p>
+<p class="info">使用querySelector方法取得元素內容</p>
+<p class="info">HTML5+CSS3+JavaScript</p>
+<p id="ex0"></p> 
+<p id="ex1"></p>             
+<script>
+   var exInfo = document.querySelector("p.info");  // 取得第一筆class是info的<p>內容
+   document.getElementById("ex0").innerHTML = exInfo.innerHTML; 
+   exInfo = document.querySelector("p");           // 取得第一筆<p>內容
+   document.getElementById("ex1").innerHTML = exInfo.innerHTML;
+</script>
+</body>
+</html>

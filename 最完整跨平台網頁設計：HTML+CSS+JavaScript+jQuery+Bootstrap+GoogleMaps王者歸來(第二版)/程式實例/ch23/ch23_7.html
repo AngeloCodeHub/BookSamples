@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch23_7.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { transformm:skewX(0deg); }
+		 25% { transform:skewX(30deg); }
+		 50% { transform:skewX(0deg); }
+         75% { transform:skewX(-30deg); }
+		 100% {transform:skewX(0deg); }
+      }
+	  img {
+	     width:100px; height:150px;
+		 object-fit:fill;
+		 border:1px solid blue;
+		 left:50px; top:50px;
+		 position:relative;
+		 animation:my-animation 6s infinite linear;
+	  }	 
+   </style>   
+</head>
+<body>
+<img src="hung.jpg">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch25_22.html</title>   
+</head>
+<body>
+<p>簡單輸出的應用</p>
+<p id="ex1"></p>
+<p id="ex2"></p>
+<p id="ex3"></p>
+<p id="ex4"></p>
+<script>
+   var a = true;
+   var b = false;
+   document.getElementById("ex1").innerHTML = "true  || true = " + (a || a);
+   document.getElementById("ex2").innerHTML = "true  || false= " + (a || b);
+   document.getElementById("ex3").innerHTML = "false || true = " + (b || a);
+   document.getElementById("ex4").innerHTML = "false || false= " + (b || b);
+</script>
+</body>
+</html>

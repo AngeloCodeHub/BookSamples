@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ch31_29.html</title>       
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header">
+    <h1>欄位Toggle表格</h1>
+  </div> 
+  <div data-role="content">        <!-- 頁面內容區 -->
+    <p>欄位Toggle表格</p>
+    <p>部分欄位會被隱藏</p>
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable">
+      <thead>
+        <tr>
+          <th data-priority="5">客戶編號</th>
+          <th>客戶姓名</th>
+          <th data-priority="1">地址</th>
+          <th data-priority="2">城市</th>
+          <th data-priority="3">郵遞區號</th>
+          <th data-priority="4">國家</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>                       <!-- 第一行資料 -->
+          <td>1</td>
+          <td>Peter</td>
+          <td>朝陽路18號</td>
+          <td>東京</td>
+          <td>30098</td>
+          <td>日本</td>
+        </tr>
+        <tr>                       <!-- 第二行資料 -->
+          <td>2</td>
+          <td>John</td>
+          <td>明志路</td>
+          <td>香港</td>
+          <td>901900</td>
+          <td>中國</td>
+        </tr>
+        <tr>                       <!-- 第三行資料 -->
+          <td>3</td>
+          <td>James</td>
+          <td>落日大道</td>
+          <td>洛杉磯</td>
+          <td>12349</td>
+          <td>美國</td>
+        </tr>
+        <tr>                       <!-- 第四行資料 -->
+          <td>4</td>
+          <td>Nelson</td>
+          <td>工專路</td>
+          <td>曼谷</td>
+          <td>55667</td>
+          <td>泰國</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   <div data-role="footer">
+      <h1>阿里商店</h1>
+   </div>
+</div> 
+</body>
+</html>

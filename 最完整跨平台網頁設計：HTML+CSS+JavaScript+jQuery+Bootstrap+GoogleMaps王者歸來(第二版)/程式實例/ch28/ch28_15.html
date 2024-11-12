@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch28_15.html</title> 		  
+</head>
+<body>
+<h1>瀏覽器history</h1>
+<p id="ex"></p>
+<input type="button" value="上一頁" onclick="historyBack( )">
+<input type="button" value="下一頁" onclick="historyForward( )">
+<script>
+   var numH = window.history;      // 設定history物件下一列會列出歷史紀錄次數
+   document.getElementById("ex").innerHTML = "歷史紀錄次數 = " + numH.length;
+   function historyBack( ) {                   // 回到上一頁
+      window.history.back( );
+   }
+   function historyForward( ) {                // 跳到下一頁
+      window.history.forward( );
+   }
+</script>
+</body>
+</html>

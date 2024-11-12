@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <meta charset="utf-8">
+   <title>ch34_0.html</title>
+<body>
+<h1>獲得瀏覽器是否支援獲取位置資訊</h1>
+<button onclick="getLocation()">Get Location</button>
+<p id="ex"></p>
+<script>
+   var loc = document.getElementById("ex");
+   function getLocation() {                  // 是否可取得位置資訊
+      if ( navigator.geolocation ) {
+         alert("瀏覽器有支援顯示位置資訊");
+      } else { 
+         alert("瀏覽器不支援顯示位置資訊");
+      }
+   }
+</script>
+</body>
+</html>
+

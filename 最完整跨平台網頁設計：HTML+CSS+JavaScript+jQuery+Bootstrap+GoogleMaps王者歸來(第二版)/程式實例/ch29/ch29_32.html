@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_32.html</title>   
+<script>   
+   function picCount( ) {
+      var x1 = document.images[0].src;  
+      var x2 = document.images.item(1).src;
+      var x3 = document.images.namedItem("pict3").src;	  
+	  document.getElementById("url").innerHTML = "圖片1 URL = " + x1 +
+	  "<br>" + "圖片2 URL = " + x2 + "<br>" + "圖片3 URL = " + x3 ;	 
+   }
+</script>   
+</head>
+<body>
+<img id="pict1" src="icerain.png" width="100">
+<img id="pict2" src="penguin.jpg" width="100">
+<img id="pict3" src="snow.jpg" width="100">
+<br>
+<button onclick="picCount( )">GetURL</button>   
+<p id="url"></p>          
+</body>
+</html>

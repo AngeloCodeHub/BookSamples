@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_36.html</title>  
+   <script>
+      function myfun( ) {
+		 var x = document.links.length;
+         document.getElementById("ex").innerHTML = "Links數量 = " + x;
+		 document.links[0].style.border = "3px solid blue"
+      }
+   </script>
+</head>
+<body>  
+<p><a href="ch29_1.html">ch29_1.html</a></p>
+<p><a href="ch29_2.html">ch29_2.html</a></p>
+<button onclick="myfun( )">執行</button>
+<p id="ex"></p>                                      
+</body>
+</html>

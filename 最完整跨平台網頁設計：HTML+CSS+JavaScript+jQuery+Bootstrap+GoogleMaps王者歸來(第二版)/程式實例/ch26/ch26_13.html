@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch26_13.html</title>   
+</head>
+<body>
+<p>使用JavaScript Array列出項目符號</p>
+<p id="ex"></p>
+<script>
+   var strList = ["Apple", "Orange", "Banana"];
+   var strLen = strList.length;                          // 獲得陣列長度
+   var ulText;
+   var i;
+   ulText = "<ul>";                                      // 項目符號起始標籤
+   for ( i = 0; i < strLen; i++ ) {
+      ulText += "<li>" + strList[i] + "</li>";  
+   }
+   ulText += "</ul>"                                     // 項目符號結束標籤
+   document.getElementById("ex").innerHTML = ulText;     // 列出項目符號
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_30.html</title>
+   <script> 
+   function colorYellow( ) {
+      document.getElementById("ex").style.backgroundColor = "yellow";   // 背景色黃色
+	  document.getElementById("ex").style.textAlign = "center";         // 置中對齊
+   }	
+   function colorAqua( ) {
+      document.getElementById("ex").style.backgroundColor = "aqua";     // 背景色水藍色
+	  document.getElementById("ex").style.textAlign = "center";         // 置中對齊
+   }
+   function colorWhite( ) {
+      document.getElementById("ex").style.backgroundColor = "white";    // 背景色白色
+	  document.getElementById("ex").style.textAlign = "center";         // 置中對齊
+   }   
+   </script>   
+</head>
+<body>
+<h1 id="ex">Coffee</h1>
+<button onclick="colorYellow( )">Yellow</button>
+<button onclick="colorAqua( )">Aqua</button>
+<button onclick="colorWhite( )">Default</button>   
+</body>
+</html>

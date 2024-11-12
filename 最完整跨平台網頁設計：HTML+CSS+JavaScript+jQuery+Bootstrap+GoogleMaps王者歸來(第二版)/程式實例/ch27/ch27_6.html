@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch27_6.html</title>   
+</head>
+<body>
+<p> Exercise Global Variable</p>
+<p id="ex1"><p>
+<p id="ex2"><p>
+<p id="ex3"><p>
+<script>
+   var msg = "Global Variable"           // 全域變數
+   document.getElementById("ex1").innerHTML = "ex1 = " + msg;
+   document.getElementById("ex2").innerHTML = "ex2 = " + txtStr( );
+   document.getElementById("ex3").innerHTML = "ex3 = " + msg;
+   function txtStr( ) {            
+      return msg;                        // 傳回全域變數
+   }
+</script>
+</body>
+</html>

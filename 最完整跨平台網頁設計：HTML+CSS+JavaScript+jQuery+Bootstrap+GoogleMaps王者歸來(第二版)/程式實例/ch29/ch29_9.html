@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_9.html</title>   
+<script>   
+   function showtextContent( ) {
+      var x = document.querySelector("p");
+      alert(x.textContent);
+   }
+   function showinnerHTML( ) {
+      var x = document.querySelector("p");
+      alert(x.innerHTML);
+   }
+   function showouterHTML( ) {
+      var x = document.querySelector("p");
+      alert(x.outerHTML);
+   }  
+</script>   
+</head>
+<body>
+<p>Marching onto the path of <b>Web Design Expert</b></p>
+<button onclick="showtextContent( )">textContent</button>
+<button onclick="showinnerHTML( )">innerHTML</button>
+<button onclick="showouterHTML( )">outerHTML</button>               
+</body>
+</html>

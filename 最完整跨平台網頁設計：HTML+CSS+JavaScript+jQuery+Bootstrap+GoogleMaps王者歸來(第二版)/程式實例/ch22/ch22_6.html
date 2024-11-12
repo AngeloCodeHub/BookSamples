@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch22_6.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { left:0px; top:0px; }
+         25% { left:200px; top:0px; }
+		 50% { left:200px; top:200px; }
+         75% { left:0px; top:200px; }
+		 100% { left:0px; top:0px; }
+      }
+	  div {
+	     width:250px;
+		 height:100px;
+		 position:relative;
+		 animation-name:my-animation;
+		 animation-duration:5s;
+		 animation-iteration-count:infinite;
+		 animation-direction:alternate;
+	  }	 
+   </style>   
+</head>
+<body>
+<div><img src="sselogo.jpg"></div>
+</body>
+</html>

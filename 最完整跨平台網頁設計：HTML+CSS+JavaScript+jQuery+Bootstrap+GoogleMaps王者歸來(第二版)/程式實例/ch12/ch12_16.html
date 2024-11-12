@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch12_16.html</title> 
+   <style> 
+	  #test1 {
+	     width:150px;
+		 border:1px solid blue;
+		 overflow:hidden;     /* 溢出資料隱藏 */
+		 text-overflow:clip;  /* 溢出資料不顯示 */
+		 white-space:nowrap;  /* 不換行輸出 */
+	  }
+	  #test2 { 
+	     width:150px;
+		 border:1px solid blue;
+		 overflow:hidden;
+         text-overflow:ellipsis; /* 溢出資料以 ... 顯示 */
+         white-space:nowrap;		 
+	  }
+   </style>
+</head>
+<body>
+<p id="test1">Silicon Stone Education is an unbiased organization.</p>
+<p id="test2">Silicon Stone Education is an unbiased organization.</p>
+</body>
+</html>

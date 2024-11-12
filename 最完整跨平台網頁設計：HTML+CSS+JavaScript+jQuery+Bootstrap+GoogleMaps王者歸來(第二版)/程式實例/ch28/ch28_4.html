@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch28_4.html</title>   
+</head>
+<body>
+<p>輸出視窗高度與寬度的應用</p>
+<p id="ex1"></p>
+<p id="ex2"></p>
+<script>
+   var winHeight = window.innerHeight;           // 瀏覽區高度
+   var winWidth = window.innerWidth;             // 瀏覽區寬度
+   var outHeight = window.outerHeight;           // 總視窗高度
+   var outWidth = window.outerWidth;             // 總視窗寬度
+   document.getElementById("ex1").innerHTML = 
+   "瀏覽區height = " + winHeight + " , 瀏覽區width = " + winWidth;
+    document.getElementById("ex2").innerHTML = 
+   "總視窗height = " + outHeight + " , 總視窗width = " + outWidth;
+</script>
+</body>
+</html>

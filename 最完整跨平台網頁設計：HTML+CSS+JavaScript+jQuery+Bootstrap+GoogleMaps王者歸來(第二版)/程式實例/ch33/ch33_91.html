@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch32_91.html</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- 設計頁首區 header -->
+<header  style="height:50px">
+   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+	  <div class="container">
+	     <a class="navbar-brand" href="#">
+            <img src="deepmind.jpg" alt="深智" height="30">
+         </a> 
+         <a class="navbar-brand" href="#">深智旅遊</a> 
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navitem">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navitem">
+            <ul class="navbar-nav me-auto">           
+               <li class="nav-item">
+                  <a class="nav-link" href="#">國內</a>
+               </li>
+			    <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">國外</a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">大陸</a>
+                     <a class="dropdown-item" href="#">日本</a>
+				      <a class="dropdown-item" href="#">瑞士</a>
+                  </div>
+               </li>
+            </ul>
+         </div>		
+      </div>
+   </nav>
+</header>
+<!-- 設計特價訊息 -->
+<div class="container">
+   <div class="alert alert-primary mt-2" role="alert">
+      <div class="spinner-grow text-primary"></div>
+      <a href="#" class="alert-link"><strong>我就是要旅遊</strong></a>
+		 疫情解封買一送一大特價!
+   </div>
+</div>
+<!-- 設計內容輪撥區 -->
+<div class="container">
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+   <ul class="carousel-indicators">
+      <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></li>
+      <li data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></li>
+   </ul>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+         <img src="snow.jpg" class="d-block w-100" alt="合掌村">
+	      <div class="carousel-caption">
+            <h4><strong>日本合掌村</strong></4>
+	      </div>	  
+      </div>
+      <div class="carousel-item">
+         <img src="mountain.jpg" class="d-block w-100" alt="黃山">
+	     <div class="carousel-caption">
+            <h4><strong>大陸黃山</strong></h4>
+		  </div>
+      </div>
+      <div class="carousel-item">
+         <img src="city.jpg" class="d-block w-100" alt="高山市">
+	     <div class="carousel-caption">
+            <h4><strong>日本高山市</strong></h4>
+		  </div>
+      </div>
+   </div>
+   <a class="carousel-control-prev" href="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+   </a>
+   <a class="carousel-control-next" href="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+   </a>
+</div>
+</div>
+<!-- 設計特價訊息 -->
+<div class="container">
+   <div class="alert alert-info mt-3" role="alert">
+      <div class="spinner-border text-success"></div>   
+      <a href="#" class="alert-link"><strong>深智數位</strong></a>
+		 購買深智圖書送旅遊折價卷!
+   </div>
+</div>
+<!-- 設計內容區 -->
+<article>	
+<div class="container">
+  <div class="row">
+   <div class="col-md-4">
+      <div class="card">
+         <img class="card-img-top" src="java.jpg" alt="book">
+         <div class="card-body">
+            <h4 class="card-title text-primary">洪錦魁</h4>
+            <p class="card-text">深智數位作者</p>
+            <a href="#" class="btn btn-primary">相關著作</a>
+         </div>
+	  </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card">
+         <img class="card-img-top" src="ma.jpg" alt="book">
+         <div class="card-body">
+            <h4 class="card-title text-primary">洪錦魁</h4>
+            <p class="card-text">深智數位作者</p>
+            <a href="#" class="btn btn-primary">相關著作</a>
+         </div>
+	  </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card">
+         <img class="card-img-top" src="r.jpg" alt="book">
+         <div class="card-body">
+            <h4 class="card-title text-primary">洪錦魁</h4>
+            <p class="card-text">深智數位作者</p>
+            <a href="#" class="btn btn-primary">相關著作</a>
+         </div>
+	   </div>
+   </div>
+  </div>
+</div>  
+</article>	
+<!-- 設計頁尾區footer -->
+<footer>
+   <div class="container">
+	  <hr>              
+      <p>&reg 版權所有 &reg</p>
+   </div>
+</footer> 	
+</body>
+</html>

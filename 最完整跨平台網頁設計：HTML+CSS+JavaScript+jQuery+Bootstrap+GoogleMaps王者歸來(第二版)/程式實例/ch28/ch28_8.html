@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch28_8.html</title> 
+</head>
+<body>
+<p>開啟新視窗Window</p>
+<button onclick="openWin( )">Open Window</button>
+<button onclick="closeWin( )">Close Window</button>
+<script>
+   var myfirstWin;
+   function openWin( ) {          // 在相同瀏覽器開新視窗
+      myfirstWin = window.open("","width=300,height=150");
+   }
+   function closeWin( ) {         // 關閉視窗
+      myfirstWin.close();
+   }
+</script>
+</body>
+</html>

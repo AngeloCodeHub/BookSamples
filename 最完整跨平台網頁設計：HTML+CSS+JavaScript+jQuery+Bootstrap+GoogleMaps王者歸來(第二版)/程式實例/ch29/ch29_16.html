@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_16.html</title>   
+<script>   
+   function changeText( ) {
+      var x1 = document.getElementById("ex1").childNodes[0].nodeValue;
+	  document.getElementById("ex2").innerHTML = x1; 
+   }	  
+</script>   
+</head>
+<body>
+<h1 id="ex1">HTML5+CSS3</h1>
+<p id="ex2">王者歸來</p>
+<button onclick="changeText( )">ChangeText</button>             
+</body>
+</html>

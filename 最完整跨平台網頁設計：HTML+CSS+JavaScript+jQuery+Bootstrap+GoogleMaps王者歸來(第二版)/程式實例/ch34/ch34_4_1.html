@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<title>ch34_4_1.html</title>
+    <style>     
+       #officeMap { width:800px; height:500px;}
+    </style>
+<body>
+   <h1>我的第一個Google Map</h1>
+   <div id="officeMap"></div>
+<script>
+   function displayMap() {
+      var mapInfo= {
+         center:new google.maps.LatLng(25.052129, 121.531526),
+         zoom:20
+      };
+      var map=new google.maps.Map(document.getElementById("officeMap"),mapInfo);
+   }
+</script>
+<!-- YOUR_API_KEY讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

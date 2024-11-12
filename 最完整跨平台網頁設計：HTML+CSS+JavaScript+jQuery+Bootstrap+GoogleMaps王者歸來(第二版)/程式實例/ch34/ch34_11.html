@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>ch31_11.html</title>
+   <style>     
+      #myMap { width:100%; height:500px;}
+   </style>
+<body>
+   <div id="myMap"></div>
+<script>
+   function displayMap() { 
+      var taipei = new google.maps.LatLng(25.040129, 121.560036);       // 台北   
+      var shanhai = new google.maps.LatLng(31.240129, 121.460036);      // 上海
+	  var beijing = new google.maps.LatLng(39.640129, 116.360036);  // 北京
+      var objMap = document.getElementById("myMap");
+      var mapInfo = {center: shanhai, zoom:4};
+      var locMap = new google.maps.Map(objMap, mapInfo);		 
+      
+	  var linePath = new google.maps.Polyline({                     // 路徑物件
+	     path:[taipei, shanhai, beijing],                           // 路徑方式
+		 strokeColor:"blue",                                    // 路徑顏色
+		 strokeWeight:2,                        
+      });
+	  linePath.setMap(locMap);                                      // 繪製路徑
+   }
+</script>
+<!-- YOUR_API_KEY讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

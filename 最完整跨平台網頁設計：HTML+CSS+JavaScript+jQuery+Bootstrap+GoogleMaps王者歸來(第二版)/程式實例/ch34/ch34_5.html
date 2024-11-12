@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>ch34_5.html</title>
+   <style>     
+      #officeMap1 { width:400px; height:300px;}
+      #officeMap2 { width:400px; height:300px;}
+      #officeMap3 { width:400px; height:300px;}
+      #officeMap4 { width:400px; height:300px;}
+   </style>
+<body>
+   <div id="officeMap1"></div><br>
+   <div id="officeMap2"></div><br>
+   <div id="officeMap3"></div><br>
+   <div id="officeMap4"></div>
+<script>
+   function displayMap() {
+      var mapInfo1 = {
+         center:new google.maps.LatLng(25.052129, 121.531526),
+         zoom:10,
+		 mapTypeId: google.maps.MapTypeId.ROADMAP
+      };	  
+	  var mapInfo2 = {
+         center:new google.maps.LatLng(25.052129, 121.531526),
+         zoom:10,
+		 mapTypeId: google.maps.MapTypeId.TERRAIN
+      };
+	  var mapInfo3 = {
+         center:new google.maps.LatLng(25.052129, 121.531526),
+         zoom:10,
+		 mapTypeId: google.maps.MapTypeId.SATELLITE
+      };
+	  var mapInfo4 = {
+         center:new google.maps.LatLng(25.052129, 121.531526),
+         zoom:10,
+		 mapTypeId: google.maps.MapTypeId.HYBRID
+      };
+      var map1=new google.maps.Map(document.getElementById("officeMap1"),mapInfo1);
+	  var map2=new google.maps.Map(document.getElementById("officeMap2"),mapInfo2);
+	  var map3=new google.maps.Map(document.getElementById("officeMap3"),mapInfo3);
+	  var map4=new google.maps.Map(document.getElementById("officeMap4"),mapInfo4);
+   }
+</script>
+<!-- YOUR_API_KEY讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

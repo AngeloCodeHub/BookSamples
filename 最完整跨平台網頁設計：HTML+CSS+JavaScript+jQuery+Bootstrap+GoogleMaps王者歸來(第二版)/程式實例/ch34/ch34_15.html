@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+   <title>ch34_15.html</title>
+   <style>     
+      #myMap { width:100%; height:600px;}
+   </style>
+<body>
+   <div id="myMap"></div>
+<script>
+   function displayMap() {      
+      var myCenter = new google.maps.LatLng(50.08955,14.41949);
+      var objMap = document.getElementById("myMap");
+      var mapInfo = {center: myCenter,
+	     zoom:18,
+	     mapTypeId:google.maps.MapTypeId.HYBRID
+	  };
+      var locMap = new google.maps.Map(objMap, mapInfo);
+   }
+</script>
+<!-- YOUR_API_KEY讀者需輸入自己的API -->
+<script src="https://maps.googleapis.com/maps/api/js?
+key=YOUR_API_KEY&callback=displayMap"></script>
+</body>
+</html>

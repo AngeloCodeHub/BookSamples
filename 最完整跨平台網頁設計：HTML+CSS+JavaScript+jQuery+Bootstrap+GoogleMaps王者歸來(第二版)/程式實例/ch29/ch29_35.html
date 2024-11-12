@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_35.html</title>   
+</head>
+<body>  
+<form id="info" action="cgi-bin/getinfo.php" method="get">
+   <p>姓名: <input type="text" name="name" value="JK Hung"></p>
+   <p>電話: <input type="tel" name="phone" value="0928999999"></p>
+   <p><input type="submit" value="測試"></p>
+</form>
+<p>請按執行鈕</p>
+<button onclick="getInput( )">執行</button>
+<p id="ex"></p>                              <!-- 預計存放結果陣列 -->          
+<script>
+function getInput( ) {
+   var i;                                          // 索引
+   var txt = "";                                   // 暫存字串
+   var str = document.forms["info"];               // 取的id是info的form   
+   var lenForm = str.length;                       // 傳回資料數量
+   for ( i = 0; i < lenForm; i++ ) {
+      txt += str.elements[i].value + "<br>"
+   }
+   document.getElementById("ex").innerHTML = txt;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_25.html</title>
+   <script> 
+   function delSchool( ) {
+      var parent = document.getElementById("demo"); // 取得父節點
+      var child = document.getElementById("ex3");   // 預計刪除的子節點
+	  parent.removeChild(child);                    // 刪除parent的子節點child
+   }	  
+   </script>   
+</head>
+<body>
+<h1>台灣著名大學</h1>
+<ul id="demo">
+   <li id="ex1">明志科技大學</li>
+   <li id="ex2">台灣科技大學</li>
+   <li id="ex3">清華大學</li>
+</ul>     
+<button onclick="delSchool( )">Delete</button>    
+</body>
+</html>

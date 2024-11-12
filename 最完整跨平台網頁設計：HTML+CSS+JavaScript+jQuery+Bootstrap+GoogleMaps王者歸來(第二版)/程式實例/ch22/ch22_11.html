@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch22_11.html</title>
+   <style>
+      @keyframes my-animation {
+         0% { color:blue; background-color:lightblue; left:0px; top:0px; }
+         25% { color:green; background-color:lightgreen; left:200px; top:0px; }
+		 50% { color:red; background-color:lightred; left:200px; top:200px; }
+         75% { color:violet; background-color:lightyellow; left:0px; top:200px; }
+		 100% { color:blue; background-color:lightblue; left:0px; top:0px; }
+      }
+	  div {
+	     width:150px;
+		 height:150px;
+		 position:relative;
+		 animation:my-animation 5s infinite alternate;
+	  }	 
+   </style>   
+</head>
+<body>
+<div>Silicon Stone</div>
+</body>
+</html>

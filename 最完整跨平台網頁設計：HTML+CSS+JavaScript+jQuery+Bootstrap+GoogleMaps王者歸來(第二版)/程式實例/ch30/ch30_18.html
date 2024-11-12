@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch30_18.html</title> 
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+            alert("var( ) : " + $("#dm").attr("href"));
+         });
+      });
+   </script>　
+</head>
+<body>
+<p><a href="https://www.deepmind.com.tw" id="dm">深智數位</a></p>
+<button>var( )功能</button>
+</body>
+</html>

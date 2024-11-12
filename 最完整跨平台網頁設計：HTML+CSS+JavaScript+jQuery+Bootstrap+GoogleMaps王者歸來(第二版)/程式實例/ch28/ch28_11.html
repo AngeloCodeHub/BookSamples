@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch28_11.html</title> 
+</head>
+<body>
+<p>訊息交換</p>
+<button onclick="testFun( )">Run</button>
+<script>
+   var childWin;
+   function testFun( ) {          
+      childWin = window.open("","_blank",
+	  "toolbar=yes,status=1,resizable=1,top=200,left=300,width=600,height=300");
+	  childWin.document.write("<p>This is child Window</p>");
+	  childWin.opener.document.write("<p>This Message from child Window</p>");
+   }
+</script>
+</body>
+</html>

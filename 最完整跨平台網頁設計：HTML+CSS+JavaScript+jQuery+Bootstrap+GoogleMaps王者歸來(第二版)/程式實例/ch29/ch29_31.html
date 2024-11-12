@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_31.html</title>   
+<script>   
+   function picCount( ) {
+      var count = document.images.length;                  // 計算<img>數量  	  
+	  document.getElementById("num").innerHTML = "<img>數量是 = " + count;	 
+   }
+</script>   
+</head>
+<body>
+<img id="pict1" src="icerain.png" width="100">
+<img id="pict2" src="penguin.jpg" width="100">
+<img id="pict3" src="snow.jpg" width="100">
+<br>
+<button onclick="picCount( )">OK</button>   
+<p id="num"></p>          
+</body>
+</html>

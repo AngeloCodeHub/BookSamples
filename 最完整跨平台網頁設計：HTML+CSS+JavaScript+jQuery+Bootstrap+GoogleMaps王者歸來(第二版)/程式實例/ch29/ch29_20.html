@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ch29_20.html</title>
+   <script> 
+      function fun1( ) {   
+         var x = document.getElementById("ex1").previousElementSibling.innerHTML;		 
+         alert("前一個節點內容 = " + x);	
+      }
+      function fun2( ) {   
+         var x = document.getElementById("ex2").previousElementSibling.innerHTML;		 
+         alert("前一個節點內容 = " + x);	
+      }
+      function fun3( ) {   
+         var x = document.getElementById("ex3").previousElementSibling.innerHTML;		 
+         alert("前一個節點內容 = " + x);	
+      }  
+   </script>   
+</head>
+<body>
+<h1>我的旅遊經歷</h1>
+<ul>
+   <li>南極大陸</li>
+   <li id="ex1" onclick="fun1( )">北極海</li>
+   <li id="ex2" onclick="fun2( )">西藏</li>
+   <li id="ex3" onclick="fun3( )">蒙古</li>
+</ul>           
+</body>
+</html>
